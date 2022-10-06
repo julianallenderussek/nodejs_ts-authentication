@@ -39,7 +39,7 @@ export class Server {
 
     private setRoutes() {
         this.app.get("/", ((req, res) => {
-            res.json({ success: true, message: "JWT Authentication"})
+            return res.json({ success: true, message: "JWT Authentication"})
         }))
     }
     

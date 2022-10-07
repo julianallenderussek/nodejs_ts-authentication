@@ -17,3 +17,14 @@ Preview the url
 ``` bash
 gp preview $(gp url 3000)
 ```
+
+## Docker Commands
+Run Docker Compose
+``` bash
+docker-compose up
+```
+
+Stop/Remove Containers
+``` bash
+docker-compose down
+```

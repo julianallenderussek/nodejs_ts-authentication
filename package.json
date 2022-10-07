@@ -6,7 +6,8 @@
   "scripts": {
     "test": "ts-node src/app.ts",
     "dev": "ts-node-dev --transpile-only --poll src/app.ts",
-    "link": "prettier --write"
+    "link": "prettier --write",
+    "bash": "./script.sh"
   },
   "repository": {
     "type": "git",
@@ -20,13 +21,16 @@
   },
   "homepage": "https://github.com/julianallenderussek/nodejs_ts_authentication#readme",
   "dependencies": {
+    "@prisma/client": "4.4.0",
     "body-parser": "^1.20.0",
     "consola": "^2.15.3",
     "console": "^0.7.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
-    "jsonwebtoken": "^8.5.1"
+    "jsonwebtoken": "^8.5.1",
+    "typescript": "^4.8.4",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.2",
@@ -34,6 +38,7 @@
     "@types/express": "^4.17.14",
     "@types/jsonwebtoken": "^8.5.9",
     "prettier": "^2.7.1",
+    "prisma": "4.4.0",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0"
   }

@@ -38,3 +38,21 @@ Connect to psql container
 ```bash
 sudo docker exec -it nodejs_ts_authentication_postgres_1 bash
 ```
+
+## Primsa Commands
+```bash
+npx prisma migrate --preview-feature dev
+```
+
+## PSQL Commands
+```bash
+psql db -U root
+```
+
+```bash
+\c connect to database
+\dt  see tables
+SELECT * FROM <tablename>;
+```
+
+

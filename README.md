@@ -18,6 +18,11 @@ Preview the url
 gp preview $(gp url 3000)
 ```
 
+Stop/Remove Containers
+``` bash
+docker-compose down
+```
+
 ## Docker Commands
 Run Docker Compose
 ``` bash
@@ -27,4 +32,9 @@ docker-compose up
 Stop/Remove Containers
 ``` bash
 docker-compose down
+```
+
+Connect to psql container
+```bash
+sudo docker exec -it nodejs_ts_authentication_postgres_1 bash
 ```

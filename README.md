@@ -55,4 +55,8 @@ psql db -U root
 SELECT * FROM <tablename>;
 ```
 
+# Primse tutorial
+Great Prisma Youtube tutorial
+https://www.youtube.com/watch?v=RebA5J-rlwg
+
 

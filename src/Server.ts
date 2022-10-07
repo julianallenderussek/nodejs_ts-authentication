@@ -5,7 +5,7 @@ import * as bodyParser from "body-parser";
 import { urlencoded } from "body-parser";
 import * as dotenv from "dotenv"
 import { PrismaClient } from "@prisma/client";
-const { v4: uuidv4 } = require('uuid');
+import { auth as AuthRoute } from "./routes/Auth"
 
 export class Server {
     public app: express.Application;
@@ -41,20 +41,17 @@ export class Server {
     }
 
     private setRoutes() {
+        this.app.use("/api/v1/auth", AuthRoute);
+
         this.app.get("/", ((req, res) => {
             return res.json({ success: true, message: "JWT Authentication"})
-        }))
+        }));
     }
 
     public async sendQuery(): Promise<void> {
-        const result: any = await this.prisma.user.create({
-            data: {
-                id: uuidv4(),
-                username: "jimmy",
-                email: "pepe@gmail.com",
-                password:"123456"
-            }
-        });
-    }    
+        const result = await this.prisma.user.findMany({
+            
+        });    
+    }
 }
 

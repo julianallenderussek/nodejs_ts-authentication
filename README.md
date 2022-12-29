@@ -36,7 +36,7 @@ docker-compose down
 
 Connect to psql container
 ```bash
-sudo docker exec -it nodejs_ts_authentication_postgres_1 bash
+sudo docker exec -it nodejs_ts_authentication-postgres-1 bash
 ```
 
 ## Primsa Commands

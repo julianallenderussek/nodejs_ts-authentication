@@ -1,0 +1,136 @@
+_type: export
+__export_format: 4
+__export_date: 2022-12-29T00:24:40.351Z
+__export_source: insomnia.desktop.app:v2022.7.0
+resources:
+  - _id: req_5a6b38a3f48e4f6fa16f746d28137755
+    parentId: fld_c4368ed1a46145f88a965bb26bf4448a
+    modified: 1672273110366
+    created: 1672272466054
+    url: "{{host}}/api/{{api_version}}/auth/register"
+    name: POST signup
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "julianallende",
+        	"email": "julianallenderussek@gmail.com",
+        	"password": "123456"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1672272466054
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_c4368ed1a46145f88a965bb26bf4448a
+    parentId: wrk_c95990715130464ea8d063bf9ba283ca
+    modified: 1672273105828
+    created: 1672273105828
+    name: Auth/Login
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1672273105828
+    _type: request_group
+  - _id: wrk_c95990715130464ea8d063bf9ba283ca
+    parentId: null
+    modified: 1672272460476
+    created: 1672272460476
+    name: Alpamed
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_49cce0bac0b246a69a372d6da913f213
+    parentId: fld_c4368ed1a46145f88a965bb26bf4448a
+    modified: 1672273373432
+    created: 1672273366960
+    url: "{{host}}/api/{{api_version}}/auth/login"
+    name: POST login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "julianallenderussek@gmail.com",
+        	"password": "123456"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1671890882411
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_2adf41b063d0e3c2e5cb0afe8a7786d4f76f5f18
+    parentId: wrk_c95990715130464ea8d063bf9ba283ca
+    modified: 1672273049083
+    created: 1672272460479
+    name: Base Environment
+    data:
+      host: http://localhost:3000
+      api_version: v1
+    dataPropertyOrder:
+      "&":
+        - host
+        - api_version
+    color: null
+    isPrivate: false
+    metaSortKey: 1672272460479
+    _type: environment
+  - _id: jar_2adf41b063d0e3c2e5cb0afe8a7786d4f76f5f18
+    parentId: wrk_c95990715130464ea8d063bf9ba283ca
+    modified: 1672272813525
+    created: 1672272460480
+    name: Default Jar
+    cookies:
+      - key: pga4_session
+        value: b9fcf23f-c119-4db4-ab32-c17e3a12114b!EEsS+n+7WPSdlEfQ4D5klZWFxDO4EpncFnHPKdQeh9A=
+        expires: 2022-12-30T00:13:33.000Z
+        domain: localhost
+        path: /
+        httpOnly: true
+        extensions:
+          - SameSite=Lax
+        hostOnly: true
+        creation: 2022-12-29T00:13:33.524Z
+        lastAccessed: 2022-12-29T00:13:33.524Z
+        id: "7775466077964523"
+    _type: cookie_jar
+  - _id: spc_18b6a7a66f5c48ee8d04620d4388cec2
+    parentId: wrk_c95990715130464ea8d063bf9ba283ca
+    modified: 1672272460476
+    created: 1672272460476
+    fileName: Alpamed
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_c9decb8ae8944c17a514226af7b004b6
+    parentId: env_2adf41b063d0e3c2e5cb0afe8a7786d4f76f5f18
+    modified: 1672272603600
+    created: 1672272599655
+    name: Development
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1672272599655
+    _type: environment

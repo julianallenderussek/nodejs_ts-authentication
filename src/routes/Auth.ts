@@ -5,8 +5,11 @@ import jwt from "jsonwebtoken";
 export const auth = Router();
 const prisma = new PrismaClient();
 
-auth.post("/login", (req, res) => {
-
+auth.post("/login", async (req, res) => {
+    const { email, password } = req.body;
+    console.log(email, password);
+    // TO DO finish login function
+    return res.status(200).json({success: true,  message: "User found"});
 });
 
 auth.post("/register", async (req, res) => {
@@ -21,7 +24,6 @@ auth.post("/register", async (req, res) => {
     if (result) {
         return res.status(400).json({sucess: false, error:"User already exists"});
     }
-    console.log("this works");
     
     const user = await prisma.user.create({
         data: {

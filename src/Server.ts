@@ -44,7 +44,7 @@ export class Server {
         this.app.use("/api/v1/auth", AuthRoute);
 
         this.app.get("/", ((req, res) => {
-            return res.json({ success: true, message: "JWT Authentication"})
+            return res.json({ success: true, message: "Server Online"})
         }));
     }
 
